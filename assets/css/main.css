@@ -32,6 +32,7 @@ header {
 	padding: 5%;
 }
 
+/* titulo profile */
 h3 {
 	color: #1B8FF7;
 	font-weight: bold;
@@ -44,8 +45,7 @@ h3 {
 	color: #4E4D53;
 }
 
-
-/* background left */
+/* background profile */
 .profile {
 	width: 30%;
 	height: 30%;
@@ -58,7 +58,7 @@ h3 {
 	top: 2%;
 }
 
-/* background ingresar commentarios */
+/* background ingresar commentarios*/
 #addComment {
 	width: 60%;
 	height: auto;
@@ -71,8 +71,7 @@ h3 {
 	float: right;
 }
 
-/* texto a ingresar 
-*/
+/* texto a ingresar */
 textarea {
 	border-radius: 0.5em;
 	width: 100%;
@@ -81,16 +80,15 @@ textarea {
 	padding: 1em;
 	border: solid;
 	border-width: 2px;
-	margin: 0;
+	margin-bottom: 0.5em;
 	overflow: hidden;
 }
 
 textarea::placeholder {
 	font-size: 15px;
-
 }
 
-/* Estilos botón twett  */
+/* Estilos botón guardar tweet  */
 #btn {
 	background-color: #1B8FF7;
 	border: 0px;
@@ -123,8 +121,10 @@ textarea::placeholder {
 	color: #4E4D53;
 	text-align: left;
 	border-radius: 0.5em;
-    padding: 0.5em;
-	outline: 0.1em solid #E5E3F2;
+	padding: 0.5em;
+	border:solid;
+	border-width: 1px;
+	border-color: rgb(199, 199, 199);
 	background-color: #FFF;
 	margin-bottom: 1em;
 }
@@ -149,32 +149,3 @@ textarea::placeholder {
 #yellow {
 	color: rgb(255, 174, 0);
 }
-
-#gray {
-	color: rgb(133, 133, 133);
-}
-
-
-/*
-#comment, .characters {
-    font-size: 12pt;
-}
-#comment {
-	padding: 8px;
-	width: 284px;
-}
-.characters {
-  	text-align: right;
-}
-.warning {
-    color: #c00;
-}
-
-#letters {
-	display: inline-block;
-	margin: 1em 1em 2em auto;
-	position: relative;
-	left: 72%;
-}
-
-*/
