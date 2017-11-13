@@ -105,7 +105,6 @@ textarea.oninput = function () {
 	textarea.style.height = Math.min(textarea.scrollHeight, 300) + "px"; 
 };
 
-
 //HORA Y FECHA DEL TWEET
 // funcion para poner la hora y feche en el Tweet
 var textarea = document.getElementById("comment"); // tomar textarea
