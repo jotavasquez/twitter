@@ -149,3 +149,15 @@ textarea::placeholder {
 #yellow {
 	color: rgb(255, 174, 0);
 }
+
+#cont .date {
+	font-size: 0.9em;
+	font-weight: bold;
+	color: rgb(71, 169, 255);
+	margin-top: 0.5em;
+}
+
+#cont p {
+	font-size: 1em;
+	margin: 0.5em;
+}

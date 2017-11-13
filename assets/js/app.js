@@ -16,6 +16,7 @@ btn.addEventListener("click", function () {
 		alert('Debes ingresar un mensaje');
 		return false;
 	}
+
 	//PONER COMENTARIOS:
 	//llamo al contenedor padre que esta en el html
 	var cont = document.getElementById('cont');
@@ -29,8 +30,28 @@ btn.addEventListener("click", function () {
 	newComments.appendChild(contenedorElemento);
 	// coloca el div newComments como hijo del contenedor padre
 	cont.appendChild(newComments);
-});
 
+	//FECHA
+	//variable entrega la fecha 
+	var today = new Date();
+	var dateTweet = today.toLocaleString("en-GB");
+	//probando funcionamiento  
+	//toLocaleString devuelve la fecha en string
+	// seleccina el formato de hora y fecha británicos "en-GB". dd/mm/yy
+	console.log(dateTweet); //probando
+	//crear nodo de textto
+	var nodeDate = document.createTextNode(dateTweet);
+	//crear  el elemento p para poner fecha
+	var dateP = document.createElement("p");
+	//poner clase date
+	dateP.setAttribute("class", "date");
+	//poner nodo en elemento p
+	dateP.appendChild(nodeDate);
+	//coloca elemento p como hijo del div newComments
+	newComments.appendChild(dateP);
+	//tomo todos los elementos de clase date
+	var date = document.getElementsByClassName("date");
+});
 
 //FUNCION CUENTA REGRESIVA
 //llamo al textArea
@@ -85,13 +106,12 @@ textarea.oninput = function () {
 };
 
 
-/*
-//funcion autoinvocada para la hora del tweet
-(function () {
-	// instantiate a JavaScript Date object
-	var NowDate = new Date();
-	// display value of Date object in #displayJsDate div
-	var eDisplayDate = document.getElementById('cont');
-	eDisplayDate.innerHTML = NowDate;
-})();
-*/
+//HORA Y FECHA DEL TWEET
+// funcion para poner la hora y feche en el Tweet
+var textarea = document.getElementById("comment"); // tomar textarea
+//oninput ejecuta javascript inmediatamente despues de que el textArea recibe datos del usuario
+textarea.oninput = function () {
+	// variable vacia que recibe los cambios de tamaño en el textArea
+	textarea.style.height = "47px";
+	textarea.style.height = Math.min(textarea.scrollHeight, 300) + "px";
+};
